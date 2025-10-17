@@ -8,6 +8,14 @@ jobs:
        run: |
         pwd
         ls
+     - name: Checkout
+       uses: actions/checkout
+
+     - name: List files after Checkout
+       run: |
+        pwd 
+        ls -a
+
      - name: Simple JAvascript Action
        users: actions/hellow-world-javascript-action@v1
        with:
