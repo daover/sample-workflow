@@ -1,0 +1,12 @@
+name: Actionn Workflow
+on: [push]
+jobs:
+ run-github-actions:
+   runs-on: ubuntu- latest
+   steps:
+     - name: Simple JAvascript Action
+       users: actions/hellow-world-javascript-action@v1
+       with:
+         who-to-greet:devopshint
+     -  name: Get the output time
+        run: echo "${{steps.hello.outputs.time}}"
