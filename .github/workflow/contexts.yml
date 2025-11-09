@@ -1,0 +1,16 @@
+name: Context testing
+on: push
+
+jobs:
+  dump_context_to_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump github context
+        id: githu_context_step
+        run: echo '${{toJSON(github)}}'
+      - name: Dump job Context
+        run: echo  '${{toJSON(job)}}'
+      - name:  Dump step Context
+        run: echo  '${{toJSON(steps)}}'
+
+ 
